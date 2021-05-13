@@ -9,7 +9,7 @@ you can find a step by step walkthrough in my [Blog]()
 ==========================
 You can find a video tutorial at [YouTube]() for the same
 
-![Watch the video]()
+![Watch the video](https://github.com/ayushi7rawat/CoWin-Vaccine-Notifier/blob/main/cover.png)
 
 LICENSE:
 ==========================
