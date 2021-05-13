@@ -1,15 +1,15 @@
 # [CoWin-Vaccine-Notifier]()
 Automated Python Script to retrieve vaccine slots availability and get notified when a slot is available.
 
-[Blog: Step by Step Guide]():
+[Blog: Step by Step Guide](https://ayushirawat.com/automate-cowin-vaccine-slots-availablity-using-python):
 ==========================
-you can find a step by step walkthrough in my [Blog]()
+you can find a step by step walkthrough in my [Blog](https://ayushirawat.com/automate-cowin-vaccine-slots-availablity-using-python)
 
-[YouTube Video Tutorial]():
+[YouTube Video Tutorial](https://www.youtube.com/watch?v=HrTQqSKWClE&ab_channel=AyushiRawat):
 ==========================
-You can find a video tutorial at [YouTube]() for the same
+You can find a video tutorial at [YouTube](https://www.youtube.com/watch?v=HrTQqSKWClE&ab_channel=AyushiRawat) for the same
 
-![Watch the video]()
+![Watch the video](https://www.youtube.com/watch?v=HrTQqSKWClE&ab_channel=AyushiRawat)
 
 LICENSE:
 ==========================
