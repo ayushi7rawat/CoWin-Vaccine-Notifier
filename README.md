@@ -9,7 +9,7 @@ you can find a step by step walkthrough in my [Blog](https://ayushirawat.com/aut
 ==========================
 You can find a video tutorial at [YouTube](https://www.youtube.com/watch?v=HrTQqSKWClE&ab_channel=AyushiRawat) for the same
 
-![Watch the video](https://www.youtube.com/watch?v=HrTQqSKWClE&ab_channel=AyushiRawat)
+![Watch the video](https://img.youtube.com/vi/HrTQqSKWClE/0.jpg)
 
 LICENSE:
 ==========================
