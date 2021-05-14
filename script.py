@@ -4,7 +4,7 @@ By Ayushi Rawat
 '''
 
 import requests
-
+from pygame import mixer 
 from datetime import datetime, timedelta
 import time
 
@@ -74,6 +74,9 @@ while True:
     if(counter == 0):
         print("No Vaccination slot avaliable!")
     else:
+        mixer.init()
+        mixer.music.load('sound/dingdong.wav')
+        mixer.music.play()
         print("Search Completed!")
 
 

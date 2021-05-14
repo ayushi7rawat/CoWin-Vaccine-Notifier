@@ -1,6 +1,11 @@
 # [CoWin-Vaccine-Notifier]()
 Automated Python Script to retrieve vaccine slots availability and get notified when a slot is available.
 
+## pre requisite
+```
+pip install requests pygame
+``` 
+
 [Blog: Step by Step Guide](https://ayushirawat.com/automate-cowin-vaccine-slots-availablity-using-python):
 ==========================
 you can find a step by step walkthrough in my [Blog](https://ayushirawat.com/automate-cowin-vaccine-slots-availablity-using-python)
