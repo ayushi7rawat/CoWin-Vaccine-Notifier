@@ -9,9 +9,9 @@ from datetime import datetime, timedelta
 import time
 
 
-age = int(input("Enter age : " ))
-pin = input("Enter pincode : ")
-pincodes = [pin]
+
+age = int(input("Enter age here : " ))
+pinCodes = [input("Enter PINCODE here : ")]
 num_days = 2
 
 print_flag = 'Y'
