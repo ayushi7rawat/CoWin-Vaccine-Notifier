@@ -9,8 +9,8 @@ from datetime import datetime, timedelta
 import time
 
 
-age = 52
-pincodes = ["462003"]
+age = 21
+pincodes = ["110040"]
 num_days = 2
 
 print_flag = 'Y'
