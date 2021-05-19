@@ -35,7 +35,6 @@ while True:
             if result.ok:
                 response_json = result.json()
                 if len(response_json["centers"]) != 0:
-                    print(response_json["centers"])
                     if(print_flag.lower() =='y'):
                         for center in response_json["centers"]:
                             for session in center["sessions"]:
