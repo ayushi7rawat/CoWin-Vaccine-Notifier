@@ -38,7 +38,7 @@ while True:
                     if(print_flag.lower() =='y'):
                         for center in response_json["centers"]:
                             for session in center["sessions"]:
-                                if (session["min_age_limit"] <= age and session["available_capacity"] > 0 ) :
+                                if (session["min_age_limit"] <= age and session["available_capacity"] > 0 and session["date"] == given_date) :
                                     print('Pincode: ' + pincode)
                                     print("Available on: {}".format(given_date))
                                     print("\t", center["name"])
