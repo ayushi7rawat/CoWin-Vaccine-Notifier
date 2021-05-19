@@ -9,8 +9,8 @@ from datetime import datetime, timedelta
 import time
 
 
-age = 52
-pincodes = ["462003"]
+age = 25
+pincodes = ["627604"]
 num_days = 2
 
 print_flag = 'Y'
@@ -34,7 +34,8 @@ while True:
 
             if result.ok:
                 response_json = result.json()
-                if response_json["centers"]:
+                if len(response_json["centers"]) != 0:
+                    print(response_json["centers"])
                     if(print_flag.lower() =='y'):
                         for center in response_json["centers"]:
                             for session in center["sessions"]:
@@ -50,6 +51,8 @@ while True:
                                         print("\t Vaccine type: ", session["vaccine"])
                                     print("\n")
                                     counter = counter + 1
+                else:
+                    print("No vaccination centres available on: {} for the pincode: {}".format(given_date,pincode))
             else:
                 print("No Response!")
                 
