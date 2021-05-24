@@ -8,12 +8,41 @@ from pygame import mixer
 from datetime import datetime, timedelta
 import time
 
+def inputs():
+    age = int(input('Enter age: '))
+    flag = 'n'
+    pincodes = []
+    print("Enter pincodes, if done then enter y:")
 
-age = 52
-pincodes = ["462003"]
-num_days = 2
+    while True:
+        input_response = input()
+        if input_response == 'y':
+            break
+        pincodes.append(input_response)
 
-print_flag = 'Y'
+    num_days = 2
+    dose = int(input('Enter dose count: '))
+    print_flag = 'Y'
+
+    dose_count = f'available_capacity_dose{dose}'
+
+    confirmation = input(f'''Start Search for 
+        Age:{age}
+        Pincode: {pincodes}
+        Dose Count: {dose}
+
+        To confirm enter y
+        ''')
+
+    return age, pincodes, flag, print_flag, num_days, dose_count, confirmation
+
+confirmation = 'n'
+
+while confirmation != 'y':
+
+    manual_response = inputs()
+    confirmation = manual_response[-1]
+    age, pincodes, flag, print_flag, num_days, dose_count, confirmation = manual_response
 
 print("Starting search for Covid vaccine slots!")
 
@@ -38,7 +67,8 @@ while True:
                     if(print_flag.lower() =='y'):
                         for center in response_json["centers"]:
                             for session in center["sessions"]:
-                                if (session["min_age_limit"] <= age and session["available_capacity"] > 0 ) :
+                                if (session["min_age_limit"] <= age and session["available_capacity"] > 0 and session[dose_count]) :
+                                   
                                     print('Pincode: ' + pincode)
                                     print("Available on: {}".format(given_date))
                                     print("\t", center["name"])
@@ -50,15 +80,18 @@ while True:
                                         print("\t Vaccine type: ", session["vaccine"])
                                     print("\n")
                                     counter = counter + 1
+                                    
             else:
                 print("No Response!")
                 
-    if counter:
+    if counter == 0:
         print("No Vaccination slot available!")
     else:
+        
         mixer.init()
         mixer.music.load('sound/dingdong.wav')
         mixer.music.play()
+        
         print("Search Completed!")
 
     dt = datetime.now() + timedelta(minutes=3)
