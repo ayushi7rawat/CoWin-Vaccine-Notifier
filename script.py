@@ -38,13 +38,13 @@ while True:
                     if(print_flag.lower() =='y'):
                         for center in response_json["centers"]:
                             for session in center["sessions"]:
-                                if (session["min_age_limit"] <= age and session["available_capacity"] > 0 ) :
+                                if (session["min_age_limit"] <= age and session["available_capacity_dose1"] > 0 ) :
                                     print('Pincode: ' + pincode)
                                     print("Available on: {}".format(given_date))
                                     print("\t", center["name"])
                                     print("\t", center["block_name"])
                                     print("\t Price: ", center["fee_type"])
-                                    print("\t Availablity : ", session["available_capacity"])
+                                    print("\t Availablity : ", session["available_capacity_dose1"])
 
                                     if(session["vaccine"] != ''):
                                         print("\t Vaccine type: ", session["vaccine"])
@@ -53,7 +53,7 @@ while True:
             else:
                 print("No Response!")
                 
-    if counter:
+    if counter == 0:
         print("No Vaccination slot available!")
     else:
         mixer.init()
