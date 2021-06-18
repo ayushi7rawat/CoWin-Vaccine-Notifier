@@ -13,7 +13,7 @@ age = 19
 pincodes = ["641011"]
 num_days = 6
 dose = 1
-polling_interval = 3
+polling_interval = 1
 
 print_flag = 'Y'
 
@@ -69,7 +69,7 @@ while True:
         mixer.music.play()
         print("Search Completed! Slots available")
 
-    dt = datetime.now() + timedelta(minutes=3)
+    dt = datetime.now() + timedelta(minutes=polling_interval)
 
     while datetime.now() < dt:
         time.sleep(1)
