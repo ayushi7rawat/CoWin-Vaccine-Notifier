@@ -53,7 +53,7 @@ while True:
             else:
                 print("No Response!")
                 
-    if counter:
+    if counter==0:
         print("No Vaccination slot available!")
     else:
         mixer.init()
