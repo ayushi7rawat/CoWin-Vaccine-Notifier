@@ -9,8 +9,10 @@ from datetime import datetime, timedelta
 import time
 
 
-age = 52
-pincodes = ["462003"]
+age = int(input("enter your age : ")) 
+print("you can enter multiple pincodes by using single space for eg.(004001 005001 006001)")
+pincode=input("enter pincode : ") 
+pincodes = pincode.split(" ") #can give multiple pincodes by using single spaces.
 num_days = 2
 
 print_flag = 'Y'
